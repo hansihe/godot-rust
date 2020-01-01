@@ -81,7 +81,6 @@ mod header_binding {
             if target_os == "android" {
                 match android_include_path() {
                     Some(android_include_path) => {
-                        println!("Include path: \t {:?}", android_include_path);
                         builder = builder
                             .clang_arg("-I")
                             .clang_arg(android_include_path.clone());
